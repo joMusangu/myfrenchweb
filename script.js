@@ -165,7 +165,7 @@ function displayEssays() {
     ];
     
     // Check if final essay file exists (for GitHub Pages, you can add the file path here)
-    // Example: finalEssays[0].link = '/essays/Pourquoi le francais.pdf';
+    // Example: finalEssays[0].link = 'essays/Pourquoi le francais.pdf';
     // For now, leaving it as null if no file is uploaded
     
     const finalEssayGrid = document.getElementById('final-essay-grid');

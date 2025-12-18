@@ -1,60 +1,79 @@
 # Portfolio Website
 
-A beautiful portfolio website showcasing your semester accomplishments including audio projects, independent stories, and essays.
+A clean, blog-style portfolio website showcasing your semester accomplishments including audio projects, independent stories, and essays.
 
-## Setup
+## Local Development
 
-1. Install dependencies:
+1. Install dependencies (optional - only needed if using the Node.js server):
 ```bash
 npm install
 ```
 
-2. Add your files to the appropriate directories:
-   - **Audio files**: Place in the `/audio` directory
-   - **Independent stories**: Place in the `/independent` directory
-   - **Essays**: Place in the `/essays` directory
-     - The final essay "Pourquoi le français?" will be automatically featured if found
-
-3. Start the server:
+2. Start the server (optional):
 ```bash
 npm start
 ```
 
-4. Open your browser and navigate to:
+3. Open your browser and navigate to:
 ```
 http://localhost:3000
 ```
 
-## File Structure
+## GitHub Pages Deployment
+
+This website is configured to work with GitHub Pages as a static site.
+
+### Quick Setup:
+
+1. **Push your code to GitHub** (if not already done)
+
+2. **Enable GitHub Pages**:
+   - Go to your repository on GitHub
+   - Click **Settings** → **Pages**
+   - Under **Source**, select:
+     - **Deploy from a branch**: Choose `main` or `master`
+     - **Folder**: Select `/ (root)`
+   - Click **Save**
+
+3. **Wait for deployment**:
+   - GitHub will build and deploy your site automatically
+   - You'll see a green checkmark when it's ready
+   - Your site will be available at: `https://[your-username].github.io/[repository-name]/`
+
+### File Structure for GitHub Pages
 
 ```
 portfolio-website/
+├── index.html          # Main page (root level)
+├── styles.css          # Styles (root level)
+├── script.js           # JavaScript (root level)
 ├── audio/              # Audio project files
-├── essays/             # Essay files (including final essay)
-├── independent/        # Independent story files
-├── public/            # Website files
-│   ├── index.html     # Main page
-│   ├── styles.css     # Styling
-│   └── script.js      # JavaScript functionality
-├── server.js          # Node.js server
-├── package.json       # Project configuration
-└── README.md          # This file
+├── essays/             # Essay files (optional)
+├── independent/        # Independent story files (optional)
+└── .github/
+    └── workflows/
+        └── static.yml  # GitHub Actions deployment
 ```
 
 ## Features
 
 - 🎵 Audio player for audio files
 - 📚 Organized sections for different content types
-- ✍️ Special highlighting for the final essay "Pourquoi le français?"
+- ✍️ Special highlighting for final essays
 - 📱 Responsive design that works on all devices
-- 🎨 Modern, beautiful UI with gradient effects
+- 🎨 Clean, blog-style UI
 
 ## Supported File Types
 
 - **Audio**: MP3, WAV, OGG, M4A (with embedded player)
-- **Essays/Stories**: PDF, DOCX, TXT, and other document formats
+- **Essays/Stories**: Google Docs links (external)
 
-## Stopping the Server
+## Important Notes
 
-Press `Ctrl+C` in the terminal to stop the server.
+- All file paths are relative (no leading `/`) to work with GitHub Pages
+- Audio files should be in the `audio/` folder
+- Google Docs links work from anywhere (they're external)
+- The site works as a static site - no server required for GitHub Pages
+
+For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
