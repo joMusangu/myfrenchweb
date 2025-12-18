@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-primary: #333;
+    --text-secondary: #666;
+    --text-light: #999;
+    --border-color: #e0e0e0;
+    --bg-color: #ffffff;
+    --bg-light: #f9f9f9;
+    --link-color: #0066cc;
+    --link-hover: #004499;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.audio-card,
+.story-card,
+.essay-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1.5rem;
+    transition: border-color 0.2s ease;
+}
+
+.audio-card:hover,
+.story-card:hover,
+.essay-card:hover {
+    border-color: #ccc;
+}
+
+.audio-card h4,
+.story-card h4,
+.essay-card h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.audio-card p,
+.story-card p,
+.essay-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.essay-description {
+    font-style: normal;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--bg-color);
+    color: var(--link-color);
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+    border: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    color: var(--link-hover);
+    border-color: #ccc;
+}
+
+.essays-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.essay-category h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.featured {
+    background: var(--bg-light);
+    border-left: 3px solid var(--text-primary);
+}
+
+.loading {
+    text-align: left;
+    color: var(--text-light);
+    font-style: italic;
+    padding: 1rem 0;
+}
+
+.empty-message {
+    text-align: left;
+    color: var(--text-light);
+    font-style: italic;
+    padding: 2rem 0;
+}
+
+footer {
+    text-align: left;
+    padding: 3rem 0 1rem;
+    color: var(--text-light);
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* Audio player styling */
+audio {
+    width: 100%;
+    margin-top: 0.75rem;
+    height: 32px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--bg-light);
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+    background-color: var(--text-primary);
+    border-radius: 50%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1.5rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section {
+        margin-bottom: 3rem;
+    }
+}
