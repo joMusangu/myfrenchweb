@@ -155,7 +155,7 @@ function displayEssays() {
         {
             title: 'Pourquoi le français?',
             description: 'Final essay exploring the importance and reasons for learning French',
-            link: null // Will be set if file exists
+            link: 'https://docs.google.com/document/d/10pOA8f-9uiI0Y6j2THMf7hXZIrAOoincNNZJ_IaBuBA/edit?usp=sharing'
         },
         {
             title: 'French Final',
@@ -163,10 +163,6 @@ function displayEssays() {
             link: 'https://docs.google.com/document/d/1DAGL_a8NbzVkEL8s_ZP8Yy7FDnp0hzE98JSj21GGPOw/edit?usp=drive_link'
         }
     ];
-    
-    // Check if final essay file exists (for GitHub Pages, you can add the file path here)
-    // Example: finalEssays[0].link = '/essays/Pourquoi le francais.pdf';
-    // For now, leaving it as null if no file is uploaded
     
     const finalEssayGrid = document.getElementById('final-essay-grid');
     finalEssayGrid.innerHTML = finalEssays.map(essay => {
